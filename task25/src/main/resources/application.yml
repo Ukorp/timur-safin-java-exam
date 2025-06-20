@@ -1,0 +1,12 @@
+app:
+  kafka:
+    bootstrap-servers: localhost:9092
+    topics:
+      in: test_topic_in
+    consumer:
+      group-id: test_group_consumer
+      auto-offset-reset: earliest
+  mongo:
+    collection: COLL
+    connection-string: MONGO STROKA
+    database: DB
