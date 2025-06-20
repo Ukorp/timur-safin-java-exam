@@ -39,7 +39,13 @@ public class MongoService {
                         if (!Objects.requireNonNull(founded.first()).isEmpty()) {
                             var ans =  founded.first().get("test_value_field").toString();
                             if (ans != null) {
-                                return ans;
+            
+                                StringBuilder result = new StringBuilder();
+                                for (int i = 0; i < ans.length(); i += 2) {
+                                    result.append(ans.charAt(i));
+                                }
+                        
+                                return result.toString();
                             }
                         }
                     }
